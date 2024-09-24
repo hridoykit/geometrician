@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry genius</title>
+  </head>
+  <body style="text-align: center">
+    <header>
+      <h1>Geometry Genius</h1>
+    </header>
+    <main>
+      <section>
+        <h3>Calculate Rectangle</h3>
+        <div>
+          <p>Area (A) = W * L</p>
+          <p>
+            <input
+              type="text"
+              placeholder="width"
+              name=""
+              id="rectangle-width"
+            />
+            <span>cm</span>
+            <!-- rectangle length -->
+            <input
+              type="text"
+              placeholder="length"
+              name=""
+              id="rectangle-length"
+            />
+            <span>cm</span>
+          </p>
+          <p>Area: <span id="display-rectangle">0</span> cm<sup>2</sup></p>
+          <div>
+            <button id="rectangle-calc-btn">Calculate</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js file -->
+    <script src="/geometrician.js"></script>
+  </body>
+</html>
