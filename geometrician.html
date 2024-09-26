@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry genius</title>
+    <!-- <style>
+      #rectangle-container {
+        /* width: 500px; */
+        padding: 20px;
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+      } -->
+    </style>
   </head>
   <body style="text-align: center">
     <header>
@@ -11,29 +19,68 @@
     </header>
     <main>
       <section>
-        <h3>Calculate Rectangle</h3>
-        <div>
-          <p>Area (A) = W * L</p>
-          <p>
-            <input
-              type="text"
-              placeholder="width"
-              name=""
-              id="rectangle-width"
-            />
-            <span>cm</span>
-            <!-- rectangle length -->
-            <input
-              type="text"
-              placeholder="length"
-              name=""
-              id="rectangle-length"
-            />
-            <span>cm</span>
-          </p>
-          <p>Area: <span id="display-rectangle">0</span> cm<sup>2</sup></p>
+        <div id="rectangle-container">
+          <figure>
+            <img src="/images/rectangle.png" alt="" />
+          </figure>
+          <h3>Calculate Rectangle</h3>
           <div>
-            <button id="rectangle-calc-btn">Calculate</button>
+            <p>Area (A) = W * L</p>
+            <p>
+              <!-- rectangle width -->
+              <input
+                type="text"
+                placeholder="width"
+                name=""
+                id="rectangle-width"
+              />
+              <span>cm</span>
+              <!-- rectangle length -->
+              <input
+                type="text"
+                placeholder="length"
+                name=""
+                id="rectangle-length"
+              />
+              <span>cm</span>
+            </p>
+            <p>Area: <span id="display-rectangle" >0</span> cm<sup>2</sup></p>
+            <div>
+              <button onclick="calculateRectangleArea()" id="rectangle-calc-btn" >Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- triangle container -->
+        <div id="triangle-container" class="card-area">
+          <figure>
+            <img src="/images/triangle.png" alt="" />
+          </figure>
+          <h3>Calculate Triangle</h3>
+          <div>
+            <p>Area (A) = 0.5 * B * H</p>
+            <p>
+              <!-- triangle base -->
+              <input
+                type="text"
+                placeholder="base"
+                name=""
+                id="triangle-base"
+              />
+              <span>cm</span>
+              <!-- triangle height -->
+              <input
+                type="text"
+                placeholder="height"
+                name=""
+                id="triangle-height"
+              />
+              <span>cm</span>
+            </p>
+            <p>Area: <span id="display-triangle">0</span> cm<sup>2</sup></p>
+            <div>
+              <button onclick="calculateTriangleArea()" id="triangle-calc-btn">Calculate</button>
+            </div>
           </div>
         </div>
       </section>
@@ -41,5 +88,7 @@
 
     <!-- js file -->
     <script src="/geometrician.js"></script>
+    <script src="/rectangle.js"></script>
+    <script src="/triangle.js"></script>
   </body>
 </html>

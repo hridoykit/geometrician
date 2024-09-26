@@ -1,37 +1,16 @@
-// recap js dom (1.1) calculate rectangle
-// reuseable function for similer task
-document.getElementById('rectangle-calc-btn').addEventListener('click', function() {
-    const width = getValue('rectangle-width');
-    const length = getValue('rectangle-length');
+// reuseable function for similar task
+// get value from input field
+function getInputValue(inputId) {
+    // return parseFloat(document.getElementById(inputId).value);
+    const getValue = document.getElementById(inputId).value;
+    const value = parseFloat(getValue);
 
-    // validation
-    if(isNaN(length) || isNaN(width)){
-        alert('input number only')
-    };
-
-    // const rectangle = length * widht;
-    // console.log(rectangle);
-    
-    // document.getElementById('display-rectangle').innerText = rectangle;
-    // return rectangle;
-
-    // call function to calculate recatangle
-    calcRectangle(width, length, 'display-rectangle');
-})
-
-// get value from input
-function getValue(id) {
-    const inputValue = document.getElementById(id).value;
-    const textToValue = parseFloat(inputValue);
-    document.getElementById(id).value = " ";
-    // console.log(textToValue);
-    // document.getElementById('display-rectangle').innerText = textToValue;
-    return textToValue;
+    document.getElementById(inputId).value = " ";
+    return value;
 };
 
-//function for calculate rectangle
-function calcRectangle(w, l, id) {
-    const area = w * l;
-    document.getElementById(id).innerText = area;
-    return area;
+// fuction for display area
+function showArea(displayId, area) {
+    const getDisplay = document.getElementById(displayId);
+    getDisplay.innerText = area;
 };
